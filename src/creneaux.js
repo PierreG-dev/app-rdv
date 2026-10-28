@@ -5,8 +5,7 @@ export const CRENEAUX = [
   { id: 'lun-14h', jour: 'Lundi', heure: '14:00' },
   { id: 'mar-10h', jour: 'Mardi', heure: '10:00' },
   { id: 'mer-09h', jour: 'Mercredi', heure: '09:00' },
-  { id: 'jeu-16h', jour: 'Jeudi', heure: '16:00' },
-  { id: 'ven-11h', jour: 'Vendredi', heure: '11:00' }
+  { id: 'jeu-16h', jour: 'Jeudi', heure: '16:00' }
 ];
 
 export function trouverCreneau(id) {
