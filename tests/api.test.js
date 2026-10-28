@@ -34,7 +34,7 @@ describe('POST /rendez-vous', () => {
   it('refuse une demande sans patient', async () => {
     const res = await request(app).post('/rendez-vous').send({ creneau: 'lun-09h' });
     expect(res.status).toBe(400);
-    expect(res.body.erreur).toBe('Champ manquant : patient');
+    expect(res.body.erreur).toBe('Champ obligatoire : patient');
   });
 
   it('refuse un créneau déjà pris', async () => {
