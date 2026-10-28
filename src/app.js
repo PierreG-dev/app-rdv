@@ -28,7 +28,7 @@ export function creerApp({ journal = console.log } = {}) {
   app.post('/rendez-vous', (req, res) => {
     const { creneau, patient } = req.body ?? {};
     for (const [nom, valeur] of Object.entries({ creneau, patient })) {
-      if (!valeur) return res.status(400).json({ erreur: `Champ manquant : ${nom}` });
+      if (!valeur) return res.status(400).json({ erreur: `Champ obligatoire : ${nom}` });
     }
     if (!trouverCreneau(creneau)) return res.status(400).json({ erreur: `Créneau inconnu : ${creneau}` });
     if (rendezVous.some((r) => r.creneau === creneau)) {
