@@ -29,6 +29,7 @@ jobs:
       - run: npm run build -- --base=/app-rdv/
         env:
           VITE_VERSION: ${{ github.sha }}
+          VITE_CLE_SMS: ${{ secrets.CLE_SMS }}
       - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
