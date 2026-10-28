@@ -16,10 +16,10 @@ describe('GET /sante', () => {
 });
 
 describe('GET /creneaux', () => {
-  it('liste les 6 créneaux de la semaine, tous libres', async () => {
+  it('liste les 7 créneaux de la semaine, tous libres', async () => {
     const res = await request(app).get('/creneaux');
     expect(res.status).toBe(200);
-    expect(res.body).toHaveLength(6);
+    expect(res.body).toHaveLength(7);
     expect(res.body.every((c) => c.libre)).toBe(true);
   });
 });
