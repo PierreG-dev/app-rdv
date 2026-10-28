@@ -32,7 +32,7 @@ export function creerApp({ journal = console.log } = {}) {
     }
     if (!trouverCreneau(creneau)) return res.status(400).json({ erreur: `Créneau inconnu : ${creneau}` });
     if (rendezVous.some((r) => r.creneau === creneau)) {
-      return res.status(400).json({ erreur: `Créneau déjà pris : ${creneau}` });
+      return res.status(409).json({ erreur: `Créneau déjà pris : ${creneau}` });
     }
     const rdv = { id: rendezVous.length + 1, creneau, patient };
     rendezVous.push(rdv);
