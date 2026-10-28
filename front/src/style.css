@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #12343b;
+  background: #f4f9f9;
+}
+
+header {
+  padding: 1.5rem;
+  color: #fff;
+  background: #1b7f8c;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0.5rem 0 0;
+}
+
+main {
+  max-width: 32rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+#creneaux {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+#creneaux li {
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #1b7f8c;
+  background: #fff;
+}
+
+footer {
+  padding: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
